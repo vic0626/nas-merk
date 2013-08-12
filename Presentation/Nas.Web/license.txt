@@ -1,0 +1,2 @@
+﻿NasCommerce open source edition is licensed under NasCommerce Public License Version 3.0 ("NPL"). 
+Please find more info here: http://www.Nascommerce.com/licensev3.aspx

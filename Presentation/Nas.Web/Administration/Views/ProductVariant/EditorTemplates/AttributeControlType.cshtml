@@ -1,0 +1,10 @@
+﻿
+@using Telerik.Web.Mvc.UI;
+@using Nas.Core.Domain.Catalog;
+@using Nas.Services.Catalog;
+
+@{
+    var controlTypeList = AttributeControlType.DropdownList.ToSelectList();
+}
+
+@Html.Telerik().DropDownList().Name("AttributeControlType").BindTo(controlTypeList)

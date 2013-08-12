@@ -1,0 +1,27 @@
+﻿@{
+    //resources
+    Html.AppendScriptParts("~/Scripts/jquery.unobtrusive-ajax.min.js");
+    Html.AppendScriptParts("~/Scripts/jquery-1.7.1.min.js");
+}
+<!DOCTYPE html>
+<html @Html.Partial("LanguageAttributes")>
+<head>
+    <title>@Html.NasTitle(true)</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="description" content="@(Html.NasMetaDescription())" />
+    <meta name="keywords" content="@(Html.NasMetaKeywords())" />
+    @Html.NasCssFiles(this.Url, ResourceLocation.Head)
+    @Html.NasScripts(this.Url, ResourceLocation.Head)
+    @Html.NasCanonicalUrls()
+    @*Favicon - upload favicon.ico file to the root directory*@
+    @Html.Action("Favicon", "Common")
+    @Html.Widget("head_html_tag")
+</head>
+<body>
+    @Html.Widget("body_start_html_tag_after")
+    @RenderBody()
+    @Html.Widget("body_end_html_tag_before")
+    @Html.NasCssFiles(this.Url, ResourceLocation.Foot)
+    @Html.NasScripts(this.Url, ResourceLocation.Foot)
+</body>
+</html>

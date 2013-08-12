@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "";
+}
+@model Nas.Plugin.Payments.PurchaseOrder.Models.PaymentInfoModel
+@using Nas.Web.Framework;
+@Html.NasLabelFor(model => model.PurchaseOrderNumber, false)
+@Html.TextBoxFor(model => model.PurchaseOrderNumber, new { autocomplete = "off" })
+@Html.ValidationMessageFor(model => model.PurchaseOrderNumber)
